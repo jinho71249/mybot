@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!-- Top menu layout -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:background="@android:color/holo_orange_light">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.7"
+            android:gravity="end|center"
+            android:layout_gravity="center"
+            android:textSize="20sp"
+            android:text="나의봇  "/>
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/enable_switch"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".5"
+            android:paddingEnd="100dp"
+            android:gravity="center" />
+    </LinearLayout>
+
+    <!-- Bottom view -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <!-- add content with MainActivity#addContent -->
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:orientation="vertical">
+               <LinearLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:id="@+id/content_list"
+                   android:orientation="vertical">
+
+               </LinearLayout>
+               <include layout = "@layout/app_usage"/>
+
+           </LinearLayout>
+        </ScrollView>
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/floatingButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            app:srcCompat="@android:drawable/ic_input_add"
+            android:background="@android:color/holo_green_light"
+            android:layout_margin="10dp"/>
+    </FrameLayout>
+    <!-- Top menu layout -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:background="@android:color/holo_orange_light">
+        <TextView
+            android:id="@+id/redirect_list"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.3"
+            android:text="리스트"
+            android:gravity="center"
+            android:background="@android:color/holo_orange_dark"
+            android:textSize="20sp"/>
+        <TextView
+            android:id="@+id/redirect_auto_alert_list"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.3"
+            android:text="자동알림"
+            android:gravity="center"
+            android:textSize="20sp"/>
+        <TextView
+            android:id="@+id/redirect_usage"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.3"
+            android:text="사용법"
+            android:gravity="center"
+            android:textSize="20sp"/>
+    </LinearLayout>
+
+
+</LinearLayout>

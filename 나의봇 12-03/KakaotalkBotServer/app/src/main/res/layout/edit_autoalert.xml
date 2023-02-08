@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!-- Top menu layout -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:background="@android:color/holo_orange_light">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.7"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:textSize="20sp"
+            android:text="나의 봇  "/>
+    </LinearLayout>
+
+    <!-- Bottom view -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+            <!-- add content with MainActivity#addContent -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:singleLine="true"
+                    android:textSize="25sp"
+                    android:text="공지 시간"
+                    android:padding="20dp" />
+                <TimePicker
+                    android:id="@+id/time_picker"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:timePickerMode="spinner"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:singleLine="true"
+                    android:textSize="25sp"
+                    android:text="응답"
+                    android:padding="20dp"/>
+
+                <EditText
+                    android:id="@+id/edit_response"
+                    android:inputType="text"
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    android:background="@drawable/black_border"
+                    android:layout_marginStart="20dp"
+                    android:gravity="start"
+                    android:hint="응답 내용을 입력하세요."
+                    android:layout_marginEnd="20dp"
+                    android:paddingStart="10dp"
+                    android:paddingTop="10dp"
+                    android:scrollbars="vertical"
+                    android:paddingEnd="0dp"/>
+
+            </LinearLayout>
+    </FrameLayout>
+    <!-- Top menu layout -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:id="@+id/edit_complete_btn"
+        android:background="@android:color/holo_orange_light">
+        <TextView
+            android:id="@+id/redirect_list"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.3"
+            android:text="응답 추가하기"
+            android:gravity="center"
+            android:background="@android:color/holo_orange_dark"
+            android:textSize="20sp"/>
+    </LinearLayout>
+
+
+</LinearLayout>

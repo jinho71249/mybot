@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/usage_layout"
+    android:visibility="gone">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        android:paddingBottom="0dp"
+        android:textSize="12sp"
+        android:text="리스트 창에서는 해당되는 명령어를 입력하면 응답어를 보여주는 설정을 할 수 있다.\n자동 알림 창에서는 요일, 시간마다 자동으로 응답하는 설정을 할 수 있다.\n\n리스트 창에서 간단한 명령어와 응답어는 +버튼을 클릭 설정하여 만들 수 있다.\n설정한 자동응답의 삭제는 해당 카드를 1~2초간 누르면 할 수 있다.\n명만들어진 카드의 명령어는 on/off버튼으로 끌 수 있다.\n\n" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:textSize="15sp"
+        android:textColor="@android:color/holo_red_dark"
+        android:text="첫 실행 방법."/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:paddingBottom="0dp"
+        android:textSize="12sp"
+        android:text="해당 앱과 안드로이드 웨어를 사용하지 않는 모바일 디버이스(공기계)에 설치 후 알림 권한을 준다.\n해당 기기에 카카오톡을 봇 역할을 할 서브계정(봇 게정)으로 로그인해준다. 봇 계정을 채팅방에 참여시킨다. 완료. (단, 봇 계정의 카톡알림이 켜져 있어야함)"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:layout_gravity="bottom">
+        <Button
+            android:layout_margin="10px"
+            android:text="안드로이드 웨어 설치"
+            android:id="@+id/redirect_store"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:layout_width="0dp"/>
+        <Button
+            android:layout_margin="10px"
+            android:text="권한 설정"
+            android:id="@+id/redirect_permission"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:layout_width="0dp"/>
+
+    </LinearLayout>
+</LinearLayout>
